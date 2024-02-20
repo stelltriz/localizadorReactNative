@@ -1,8 +1,10 @@
 import {View, StyleSheet} from 'react-native'
+import { Header } from '../componentes/Header';
 
 export function Inicial(){
     return(
         <View style={estilos.container}>
+            <Header />
         </View>
     );
 }
