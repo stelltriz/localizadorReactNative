@@ -1,9 +1,18 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native"
 
-export const Botao = () => {
+export const Botao = ({texto}) => { //or = props => | {props.texto}
+
+    let clicks = 0
+    const countClicks = () =>{
+        console.log(clicks++)
+    }
+
     return(
-        <TouchableOpacity style={estilos.container}>
-            <Text style={estilos.texto}>USERS</Text>
+        <TouchableOpacity 
+            style={estilos.container}
+            onPress={countClicks}
+        >
+            <Text style={estilos.texto}>{texto} {clicks}</Text>
         </TouchableOpacity>
     )
 }

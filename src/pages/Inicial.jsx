@@ -5,10 +5,13 @@ import { Botao } from '../componentes/Botao';
 export function Inicial(){
     return(
         <View style={estilos.container}>
-            <Header />
-            <Botao />
-            <Botao />
-            <Botao />
+            <Header 
+                titulo="Testing"
+                subtitulo="test"
+            />
+            <Botao texto="Profile"/>
+            <Botao texto="Sensors"/>
+            <Botao texto="About"/>
         </View>
     );
 }
