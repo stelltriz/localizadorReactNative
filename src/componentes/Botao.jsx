@@ -1,10 +1,12 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native"
+import { useState } from 'react'
 
 export const Botao = ({texto}) => { //or = props => | {props.texto}
 
-    let clicks = 0
+    const [clicks, setClicks] = useState(0) //tipo get e set
+    
     const countClicks = () =>{
-        console.log(clicks++)
+        setClicks( clicks + 1)
     }
 
     return(
