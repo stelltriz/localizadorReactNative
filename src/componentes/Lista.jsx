@@ -13,6 +13,7 @@ const estilos = StyleSheet.create({
         color:'#252422',
         fontWeight: 'bold',
         fontSize: 22,
+        paddingTop: 25,
     }
 
 })

@@ -6,7 +6,7 @@ import { Lista } from "../componentes/Lista"
 export function Usuarios(){
     return(
         <View style={estilos.container}>
-            <Header titulo="User"/>
+            <Header titulo="Users"/>
             <Formulario />
             <Lista />
         </View>
