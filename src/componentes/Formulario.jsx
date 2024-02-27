@@ -43,7 +43,11 @@ export function Formulario(){
                 value={telefone}
             />
 
-            <TouchableOpacity style={estilos.botao}>
+            <TouchableOpacity 
+                style={estilos.botao}
+                onPress={addUser}
+            >
+
                 <Text style={estilos.botaoText}>Enter</Text>
             </TouchableOpacity>
 
@@ -69,7 +73,8 @@ const estilos = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         fontSize: 16,
-        elevation: 6
+        elevation: 6,
+        
     },
     botao: {
         alignSelf: 'center',
