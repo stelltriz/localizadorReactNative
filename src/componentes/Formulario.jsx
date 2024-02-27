@@ -6,6 +6,16 @@ export function Formulario(){
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [telefone, setTelefone] = useState('')
+
+    function addUser(){
+        let newUser = {
+            nome: nome,
+            email: email,
+            telefone: telefone
+        }
+        
+        console.log(newUser)
+    }
     
     return(
         <View style = {estilos.container}>
