@@ -19,36 +19,39 @@ export function Formulario(){
     
     return(
         <View style = {estilos.container}>
-            <TextInput
-                style={estilos.campo}
-                placeholder="Name" 
-                keyboardType='default'
-                onChangeText={setNome}        //evento
-                value={nome}
-            />
 
-            <TextInput 
-                style={estilos.campo}
-                placeholder="Email" 
-                keyboardType='email-address'
-                onChangeText={setEmail}        //evento
-                value={email}
-            />
+            <View style = {estilos.containerCampos}>
+                <TextInput
+                    style={estilos.campo}
+                    placeholder="Name" 
+                    keyboardType='default'
+                    onChangeText={setNome}        //evento
+                    value={nome}
+                />
 
-            <TextInput
-                style={estilos.campo}
-                placeholder="Telephone"
-                keyboardType='phone-pad'  
-                onChangeText={setTelefone}        //evento
-                value={telefone}
-            />
+                <TextInput 
+                    style={estilos.campo}
+                    placeholder="Email" 
+                    keyboardType='email-address'
+                    onChangeText={setEmail}        //evento
+                    value={email}
+                />
+
+                <TextInput
+                    style={estilos.campo}
+                    placeholder="Telephone"
+                    keyboardType='phone-pad'  
+                    onChangeText={setTelefone}        //evento
+                    value={telefone}
+                />
+            </View>
 
             <TouchableOpacity 
                 style={estilos.botao}
                 onPress={addUser}
             >
 
-                <Text style={estilos.botaoText}>Enter</Text>
+                <Text style={estilos.botaoText}>+</Text>
             </TouchableOpacity>
 
         </View>
@@ -58,15 +61,20 @@ export function Formulario(){
 const estilos = StyleSheet.create({
 
     container: {
-        paddingHorizontal: 5,
+        flexDirection: 'row',
+        paddingHorizontal: 18,
         paddingVertical: 10,
         marginVertical: 10
+    },
+
+    containerCampos: {
+        flex: 1
     },
 
     campo: {
         alignSelf: 'center',
         height: 50,
-        width: 370,
+        width: 250,
         backgroundColor: '#edf2fb',
         color: 'black',
         marginVertical: 5,
@@ -77,10 +85,9 @@ const estilos = StyleSheet.create({
         
     },
     botao: {
-        alignSelf: 'center',
-        marginTop: 20,
-        height: 50,
-        width: 230,
+        justifyContent: 'center',
+        height: 170,
+        width: 100,
         alignItems: 'center',
         backgroundColor: '#252422',
         marginVertical: 5,
