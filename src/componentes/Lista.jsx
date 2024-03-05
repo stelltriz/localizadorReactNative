@@ -1,9 +1,45 @@
-import {View, StyleSheet, Text } from "react-native"
+import {View, StyleSheet, Text, FlatList } from "react-native"
 
 export function Lista(){
+
+    const listUsers = [
+        {
+            code: '1',
+            nome: 'Carlito',
+            email: 'carli@to.com',
+            telefone: '123456'
+        },
+
+        {
+            code: '2',
+            nome: 'Javier',
+            email: 'ja@vier.com',
+            telefone: '1232323'
+        },
+        
+        {
+            code: '3',
+            nome: 'Elimin',
+            email: 'eli@min.com',
+            telefone: '888888'
+        },
+        
+    ]
+
+
     return(
         <View>
-            <Text style={estilos.texto}>List</Text>
+            <FlatList
+                data = {listUsers}
+                keyExtractor = {(item) => {item.code}}
+                renderItem = {(item) => (
+                <>   
+                    <Text>{item.nome}</Text>
+                    <Text>{item.email}</Text>
+                    <Text>{item.telefone}</Text>
+                </> 
+                )}
+            />
         </View>
     )
 }
