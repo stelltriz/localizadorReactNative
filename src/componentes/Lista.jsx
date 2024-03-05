@@ -22,21 +22,20 @@ export function Lista(){
             nome: 'Elimin',
             email: 'eli@min.com',
             telefone: '888888'
-        },
+        }
         
     ]
-
 
     return(
         <View>
             <FlatList
                 data = {listUsers}
                 keyExtractor = {(item) => {item.code}}
-                renderItem = {(item) => (
+                renderItem = {({item}) => (
                 <>   
-                    <Text>{item.nome}</Text>
-                    <Text>{item.email}</Text>
-                    <Text>{item.telefone}</Text>
+                    <Text style={estilos.texto}>{item.nome}</Text>
+                    <Text style={estilos.texto}>{item.email}</Text>
+                    <Text style={estilos.texto}>{item.telefone}</Text>
                 </> 
                 )}
             />
@@ -49,7 +48,7 @@ const estilos = StyleSheet.create({
         color:'#252422',
         fontWeight: 'bold',
         fontSize: 22,
-        paddingTop: 25,
+        paddingTop: 10
     }
 
 })
