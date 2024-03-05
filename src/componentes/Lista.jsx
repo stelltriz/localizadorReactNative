@@ -33,9 +33,7 @@ export function Lista(){
                 keyExtractor = {(item) => {item.code}}
                 renderItem = {({item}) => (
                 <>   
-                    <Text style={estilos.texto}>{item.nome}</Text>
-                    <Text style={estilos.texto}>{item.email}</Text>
-                    <Text style={estilos.texto}>{item.telefone}</Text>
+                   
                 </> 
                 )}
             />
