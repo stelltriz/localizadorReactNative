@@ -32,9 +32,7 @@ export function Lista(){
                 data = {listUsers}
                 keyExtractor = {(item) => {item.code}}
                 renderItem = {({item}) => (
-                <>   
-                   
-                </> 
+                
                 )}
             />
         </View>
