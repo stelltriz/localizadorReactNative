@@ -33,7 +33,11 @@ export function Lista(){
                 data = {listUsers}
                 keyExtractor = {(item) => {item.code}}
                 renderItem = {({item}) => (
-                    <Usuario />
+                    <Usuario 
+                        nome = {item.nome}
+                        email = {item.email}
+                        telefone = {item.telefone}
+                    />
                 )}
             />
         </View>
