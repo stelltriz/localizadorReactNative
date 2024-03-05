@@ -1,4 +1,5 @@
-import {View, StyleSheet, Text, FlatList } from "react-native"
+import {View, StyleSheet, FlatList } from "react-native"
+import { Usuario } from "./Usuario"
 
 export function Lista(){
 
@@ -32,7 +33,7 @@ export function Lista(){
                 data = {listUsers}
                 keyExtractor = {(item) => {item.code}}
                 renderItem = {({item}) => (
-                
+                    <Usuario />
                 )}
             />
         </View>

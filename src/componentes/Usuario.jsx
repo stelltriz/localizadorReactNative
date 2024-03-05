@@ -11,7 +11,7 @@ export function Usuario(){
             </View>
 
             <TouchableOpacity style={estilos.botao}>
-                <Text style={estilos.texto}>-</Text>
+                <Text style={estilos.textoBotao}>-</Text>
             </TouchableOpacity>
 
         </View>
@@ -21,7 +21,17 @@ export function Usuario(){
 const estilos = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        backgroundColor: '#edf2fb'
+        backgroundColor: '#edf2fb',
+        alignSelf: 'center',
+        height: 50,
+        width: 250,
+        backgroundColor: '#edf2fb',
+        color: 'black',
+        marginVertical: 5,
+        padding: 10,
+        borderRadius: 4,
+        fontSize: 16,
+        elevation: 6
     },
 
     containerDados: {
@@ -36,15 +46,18 @@ const estilos = StyleSheet.create({
         backgroundColor: '#252422',
         marginVertical: 5,
         padding: 10,
-        borderRadius: 10,
         fontSize: 10,
+        borderRadius: 2
     },
 
     texto: {
-        color:'#252422',
-        fontWeight: 'bold',
-        fontSize: 22,
-        paddingTop: 10
+        color:'#edf2fb',
+        fontSize: 10
+    },
+
+    textoBotao: {
+        color:'#edf2fb',
+        fontSize: 40
     }
 
 })
