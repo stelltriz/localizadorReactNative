@@ -8,10 +8,27 @@ export function Usuarios(){
 
     const [listaUsuarios, setListaUsuarios] = useState([]); //useState serve para armazenar informações, dados
 
+    function addUser(nome, email, telefone){
+        let newUser = {
+            codigo: '',
+            nome: nome,
+            email: email,
+            telefone: telefone
+        }
+
+        setListaUsuarios([...listaUsuarios, newUser]) //spread
+        console.log(listaUsuarios)
+
+    }
+
+    function removerUsuario(){
+
+    }
+
     return(
         <View style={estilos.container}>
             <Header titulo="Users"/>
-            <Formulario />
+            <Formulario adicionar = {addUser}/>
             <Lista />
         </View>
     )
