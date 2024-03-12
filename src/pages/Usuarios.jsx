@@ -36,7 +36,10 @@ export function Usuarios(){
         <View style={estilos.container}>
             <Header titulo="Users"/>
             <Formulario adicionar = {addUser}/>
-            <Lista colecao={listaUsuarios}/>
+            <Lista 
+                colecao={listaUsuarios}
+                remover={removeUser}         
+            />
         </View>
     )
 }
