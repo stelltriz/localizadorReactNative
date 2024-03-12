@@ -1,4 +1,4 @@
-import {View, StyleSheet, FlatList } from "react-native"
+import {View, StyleSheet, FlatList, Text } from "react-native"
 import { Usuario } from "./Usuario"
 
 export function Lista({ colecao, remover }) {
@@ -15,8 +15,11 @@ export function Lista({ colecao, remover }) {
                         remover={() => remover(item.code)}
                     />
                 )}
-
-                
+                ListEmptyComponent={() => (
+                    <Text style={estilos.texto}>
+                        Nenhum Usuário Cadastrado
+                    </Text>
+                )}
             />
         </View>
     );
@@ -26,8 +29,9 @@ const estilos = StyleSheet.create({
     texto: {
         color:'#252422',
         fontWeight: 'bold',
-        fontSize: 22,
-        paddingTop: 10
+        fontSize: 16,
+        paddingTop: 15,
+        textAlign: 'center'
     }
 
 })

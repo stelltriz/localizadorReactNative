@@ -35,18 +35,17 @@ const estilos = StyleSheet.create({
     },
 
     containerDados: {
-        flex: 1
+        flexDirection: 'row',
+        margin: 5
     },
 
     botao: {
+        marginStart: 10,
         justifyContent: 'center',
-        height: 10,
-        width: 10,
+        height: 20,
+        width: 40,
         alignItems: 'center',
         backgroundColor: '#252422',
-        marginVertical: 5,
-        padding: 10,
-        fontSize: 10,
         borderRadius: 2
     },
 
