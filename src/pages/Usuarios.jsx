@@ -13,14 +13,12 @@ export function Usuarios(){
     const [listaUsuarios, setListaUsuarios] = useState([]); //useState serve para armazenar informações, dados
 
     const addUser = (nome, email, telefone) => {
-
         let newUser = {
-            codigo: uuidv4(),
+            code: uuidv4(),
             nome: nome,
             email: email,
             telefone: telefone
         }
-
         setListaUsuarios([...listaUsuarios, newUser]) //spread
         console.log(listaUsuarios)
     }

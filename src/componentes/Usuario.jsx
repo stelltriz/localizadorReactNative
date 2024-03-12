@@ -1,21 +1,21 @@
-import {View, StyleSheet, TouchableOpacity, Text } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-export function Usuario(nome, email, telefone){
-    return(
+export function Usuario({ nome, email, telefone, remover }) {
+    return (
         <View style={estilos.container}>
-
             <View style={estilos.containerDados}>
                 <Text style={estilos.texto}>{nome}</Text>
                 <Text style={estilos.texto}>{email}</Text>
                 <Text style={estilos.texto}>{telefone}</Text>
             </View>
-
-            <TouchableOpacity style={estilos.botao}>
+            <TouchableOpacity
+                style={estilos.botao}
+                onPress={remover}
+            >
                 <Text style={estilos.textoBotao}>-</Text>
             </TouchableOpacity>
-
         </View>
-    )
+    );
 }
 
 const estilos = StyleSheet.create({
@@ -51,8 +51,11 @@ const estilos = StyleSheet.create({
     },
 
     texto: {
-        color:'#edf2fb',
-        fontSize: 10
+        color: '#252422', // Apply the specified text color
+        fontWeight: 'bold',
+        fontSize: 10,
+        paddingTop: 10,
+        display: 'flex'
     },
 
     textoBotao: {
