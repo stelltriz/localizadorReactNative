@@ -4,26 +4,6 @@ import { Usuario } from "./Usuario"
 export function Lista(){
 
     const listUsers = [
-        {
-            code: '1',
-            nome: 'Carlito',
-            email: 'carli@to.com',
-            telefone: '123456'
-        },
-
-        {
-            code: '2',
-            nome: 'Javier',
-            email: 'ja@vier.com',
-            telefone: '1232323'
-        },
-        
-        {
-            code: '3',
-            nome: 'Elimin',
-            email: 'eli@min.com',
-            telefone: '888888'
-        }
         
     ]
 

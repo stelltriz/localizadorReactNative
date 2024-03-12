@@ -1,7 +1,7 @@
 import { useState } from "react"
 import {View, StyleSheet, TextInput, TouchableOpacity, Text } from "react-native"
 
-export function Formulario(adicionar){
+export function Formulario({adicionar}){
 
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
