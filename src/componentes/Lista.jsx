@@ -6,7 +6,7 @@ export function Lista({colecao}){
         <View>
             <FlatList
                 data = {colecao}
-                keyExtractor = {(item) => {item.code}}
+                keyExtractor = {item => item.code}
                 renderItem = {({item}) => (
                     <Usuario 
                         nome = {item.nome}
