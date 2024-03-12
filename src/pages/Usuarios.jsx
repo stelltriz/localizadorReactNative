@@ -26,7 +26,10 @@ export function Usuarios(){
     }
 
     const removeUser = code => {
-        listaUsuarios.filter( usuario => usuario.code !== code)
+
+        setListaUsuarios(
+            listaUsuarios.filter( usuario => usuario.code !== code)
+        )
     }
 
     return(
