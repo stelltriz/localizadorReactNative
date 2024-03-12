@@ -1,16 +1,11 @@
 import {View, StyleSheet, FlatList } from "react-native"
 import { Usuario } from "./Usuario"
 
-export function Lista(){
-
-    const listUsers = [
-        
-    ]
-
+export function Lista({colecao}){
     return(
         <View>
             <FlatList
-                data = {listUsers}
+                data = {colecao}
                 keyExtractor = {(item) => {item.code}}
                 renderItem = {({item}) => (
                     <Usuario 

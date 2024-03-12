@@ -13,7 +13,7 @@ export function Usuarios(){
 
     function addUser(nome, email, telefone){
         let newUser = {
-            codigo: uuidv4(),
+            codigo: String(uuidv4()),
             nome: nome,
             email: email,
             telefone: telefone
@@ -27,7 +27,7 @@ export function Usuarios(){
         <View style={estilos.container}>
             <Header titulo="Users"/>
             <Formulario adicionar = {addUser}/>
-            <Lista />
+            <Lista colecao={listaUsuarios}/>
         </View>
     )
 }
