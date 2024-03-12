@@ -18,11 +18,6 @@ export function Usuarios(){
 
         setListaUsuarios([...listaUsuarios, newUser]) //spread
         console.log(listaUsuarios)
-
-    }
-
-    function removerUsuario(){
-
     }
 
     return(
