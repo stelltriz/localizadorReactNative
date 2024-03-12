@@ -1,8 +1,9 @@
 import {View, StyleSheet } from "react-native"
+import { useState } from "react"
+
 import { Header } from "../componentes/Header"
 import { Formulario } from "../componentes/Formulario"
 import { Lista } from "../componentes/Lista"
-import { useState } from "react"
 
 import 'react-native-get-random-values'
 import { v4 as uuidv4 } from 'uuid';
@@ -11,8 +12,8 @@ export function Usuarios(){
 
     const [listaUsuarios, setListaUsuarios] = useState([]); //useState serve para armazenar informações, dados
 
-    function addUser(nome, email, telefone){
-        
+    const addUser = (nome, email, telefone) => {
+
         let newUser = {
             codigo: uuidv4(),
             nome: nome,
@@ -22,6 +23,10 @@ export function Usuarios(){
 
         setListaUsuarios([...listaUsuarios, newUser]) //spread
         console.log(listaUsuarios)
+    }
+
+    const removeUser = code => {
+        listaUsuarios.filter( usuario => usuario.code !== code)
     }
 
     return(
