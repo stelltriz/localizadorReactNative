@@ -4,13 +4,16 @@ import { Formulario } from "../componentes/Formulario"
 import { Lista } from "../componentes/Lista"
 import { useState } from "react"
 
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
+
 export function Usuarios(){
 
     const [listaUsuarios, setListaUsuarios] = useState([]); //useState serve para armazenar informações, dados
 
     function addUser(nome, email, telefone){
         let newUser = {
-            codigo: '',
+            codigo: uuidv4,
             nome: nome,
             email: email,
             telefone: telefone
